@@ -60,14 +60,10 @@ export class CadastroUsuarioComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    let nascimento = new FormControl('', [Validators.required, Validators.minLength(10), 
-      Validators.maxLength(10), CustomValidators.date]);
-
     this.cadastroForm = this.fb.group({
       nome: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(150)]],
       email: ['', [Validators.required, Validators.email]],
-      dataNascimento: nascimento,
+      dataNascimento: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
       profissao: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(150)]],
       experiencia: ['', [Validators.maxLength(500)]],
       cursos: ['', [Validators.maxLength(300)]]

@@ -33,7 +33,7 @@
           <label class="col-md-3 col-sm-5 control-label" for="dataNascimento">Data de Nascimento</label>
           <div class="col-md-10">
             <input class="form-control" id="dataNascimento" type="text" placeholder="Data de Nascimento (requerido)" formControlName="dataNascimento" 
-            [ngClass]="{'is-invalid': displayMessage.dataNascimento}" date/>
+            [ngClass]="{'is-invalid': displayMessage.dataNascimento}"/>
             <span class="text-danger" *ngIf="displayMessage.dataNascimento">
               <p [innerHTML]="displayMessage.dataNascimento"></p>
             </span>
