@@ -20,8 +20,8 @@
         <div class="form-group">
             <label class="col-md-3 col-sm-5 control-label" for="senha">Senha</label>
             <div class="col-md-10">
-                <input class="form-control" id="senha" type="text" placeholder="Senha (requerida)" formControlName="senha" 
-                [ngClass]="{'is-invalid': displayMessage.senha }" />
+                <input class="form-control" id="senha" type="password" placeholder="Senha (requerida)" formControlName="senha" 
+                [ngClass]="{'is-invalid': displayMessage.senha }"/>
                 <span class="text-danger" *ngIf="displayMessage.senha">
                     <p [innerHTML]="displayMessage.senha"></p>
                 </span>

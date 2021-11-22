@@ -20,7 +20,7 @@
       <div class="form-group">
           <label class="col-md-3 col-sm-5 control-label" for="senha">Senha</label>
           <div class="col-md-10">
-              <input class="form-control" id="senha" type="text" placeholder="Senha (requerida)" formControlName="senha" 
+              <input class="form-control" id="senha" type="password" placeholder="Senha (requerida)" formControlName="senha" 
               [ngClass]="{'is-invalid': displayMessage.senha }" />
               <span class="text-danger" *ngIf="displayMessage.senha">
                   <p [innerHTML]="displayMessage.senha"></p>
@@ -31,7 +31,7 @@
       <div class="form-group">
         <label class="col-md-3 col-sm-5 control-label" for="confirmarSenha">Confirme a Senha</label>
         <div class="col-md-10">
-            <input class="form-control" id="confirmarSenha" type="text" placeholder="Confirmar Senha (requerida)" formControlName="confirmarSenha" 
+            <input class="form-control" id="confirmarSenha" type="password" placeholder="Confirmar Senha (requerida)" formControlName="confirmarSenha" 
             [ngClass]="{'is-invalid': displayMessage.confirmarSenha }" />
             <span class="text-danger" *ngIf="displayMessage.confirmarSenha">
                 <p [innerHTML]="displayMessage.confirmarSenha"></p>
