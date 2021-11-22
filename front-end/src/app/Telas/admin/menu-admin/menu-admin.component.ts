@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Nav } from 'src/app/Telas/Models/Nav';
+import { LocalStorageUtils } from 'src/app/Validacao/localStorage';
 
 @Component({
   selector: 'app-menu-admin',
@@ -7,6 +9,8 @@ import { Nav } from 'src/app/Telas/Models/Nav';
   styleUrls: ['./menu-admin.component.css']
 })
 export class MenuAdminComponent implements OnInit {
+
+  public localStorage: LocalStorageUtils = new LocalStorageUtils();
 
   isCollapsed = true;
 
@@ -31,9 +35,14 @@ export class MenuAdminComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  logout() {
+    this.localStorage.limparDadosLocaisAdmin();
+    this.router.navigate(['']);
   }
 
 }

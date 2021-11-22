@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Nav } from 'src/app/Telas/Models/Nav';
+import { LocalStorageUtils } from 'src/app/Validacao/localStorage';
 
 @Component({
   selector: 'app-menu-usuario',
@@ -7,6 +9,8 @@ import { Nav } from 'src/app/Telas/Models/Nav';
   styleUrls: ['./menu-usuario.component.css']
 })
 export class MenuUsuarioComponent implements OnInit {
+
+  public localStorage: LocalStorageUtils = new LocalStorageUtils();
 
   isCollapsed = true;
 
@@ -43,9 +47,14 @@ export class MenuUsuarioComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  logout() {
+    this.localStorage.limparDadosLocaisUsuario();
+    this.router.navigate(['']);
   }
 
 }

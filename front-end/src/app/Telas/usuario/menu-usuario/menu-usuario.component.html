@@ -11,6 +11,10 @@
         <li class="nav-item" *ngFor="let item of nav">
           <a class="nav-link" [routerLinkActiveOptions]="{ exact: item.exact }" routerLinkActive="active" [routerLink]="item.link">{{ item.name }}</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="javascript:void(0)" (click)="logout()">
+              Sair <span class="fas fa-sign-out-alt botao-sair"></span></a>
+        </li>
       </ul>
     </div>
   </div>
